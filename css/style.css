@@ -119,7 +119,7 @@ html {
   top: 0px;
   bottom: 0px;
   right: 0px;
-  background-color: #a5bfdd;
+  background: #000000 url('/images/loading.black.gif') no-repeat center center;
 }
 #place {
   margin: 30px;

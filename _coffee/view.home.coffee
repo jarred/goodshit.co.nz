@@ -6,8 +6,8 @@ GS.Views.Home = Backbone.View.extend
   initialize: (@o) ->
     _.bindAll @
     @$el = $(@el)
-    # @loadMapsAPI()
-    @loadStyle()
+    @loadMapsAPI()
+    # @loadStyle()
     return
 
   loadStyle: ->
@@ -29,17 +29,26 @@ GS.Views.Home = Backbone.View.extend
     return
 
   mapsApiLoaded: ->
-    @addMap()
+    # @addMap()
+    $.ajax
+      url: "http://maps.stamen.com/js/tile.stamen.js"
+      dataType: 'script'
+      success: @addMap
     return
 
   addMap: ->
+    layer = 'toner'
     options =
       center: new google.maps.LatLng(-41.311833, 174.779038)
       zoom: 12
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-      styles: @mapStyle
+      mapTypeId: layer
+      backgroundColor: '#000000'
+      mapTypeControlOptions:
+        mapTypeIds: [layer]
+
     @map = new google.maps.Map document.getElementById('map'), options
     # load places...
+    @map.mapTypes.set layer, new google.maps.StamenMapType(layer)
     $.ajax
       url: '/places.json'
       dataType: 'json'

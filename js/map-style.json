@@ -2,32 +2,32 @@
   {
     "featureType": "water",
     "stylers": [
-      { "hue": "#666666" }
+      { "hue": "#000000" }
     ]
   },{
     "featureType": "transit",
     "stylers": [
-      { "hue": "#666666" }
+      { "hue": "#000000" }
     ]
   },{
     "featureType": "road",
     "stylers": [
-      { "hue": "#666666" }
+      { "hue": "#000000" }
     ]
   },{
     "featureType": "poi",
     "stylers": [
-      { "hue": "#666666" }
+      { "hue": "#000000" }
     ]
   },{
     "featureType": "landscape",
     "stylers": [
-      { "hue": "#666666" }
+      { "hue": "#000000" }
     ]
   },{
     "featureType": "administrative",
     "stylers": [
-      { "hue": "#666666" }
+      { "hue": "#000000" }
     ]
   },{
   }

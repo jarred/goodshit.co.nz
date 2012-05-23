@@ -11,7 +11,7 @@
     init: function() {
       _.bindAll(this);
       GS.appModel = new Backbone.Model();
-      this.extendViews();
+      $(window).bind('load', this.extendViews);
     },
     extendViews: function() {
       var _this = this;

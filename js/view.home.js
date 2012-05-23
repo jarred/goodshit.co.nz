@@ -10,7 +10,7 @@
       this.o = o;
       _.bindAll(this);
       this.$el = $(this.el);
-      this.loadStyle();
+      this.loadMapsAPI();
     },
     loadStyle: function() {
       var _this = this;
@@ -32,17 +32,26 @@
       });
     },
     mapsApiLoaded: function() {
-      this.addMap();
+      $.ajax({
+        url: "http://maps.stamen.com/js/tile.stamen.js",
+        dataType: 'script',
+        success: this.addMap
+      });
     },
     addMap: function() {
-      var options;
+      var layer, options;
+      layer = 'toner';
       options = {
         center: new google.maps.LatLng(-41.311833, 174.779038),
         zoom: 12,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        styles: this.mapStyle
+        mapTypeId: layer,
+        backgroundColor: '#000000',
+        mapTypeControlOptions: {
+          mapTypeIds: [layer]
+        }
       };
       this.map = new google.maps.Map(document.getElementById('map'), options);
+      this.map.mapTypes.set(layer, new google.maps.StamenMapType(layer));
       $.ajax({
         url: '/places.json',
         dataType: 'json',

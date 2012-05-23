@@ -7,7 +7,8 @@ GS.Main =
   init: ->
     _.bindAll @
     GS.appModel = new Backbone.Model()
-    @extendViews()
+    # @extendViews()
+    $(window).bind 'load', @extendViews
     # $.ajax
     #   url: '/places.json'
     #   dataType: 'json'
