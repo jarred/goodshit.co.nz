@@ -53,7 +53,7 @@
       this.map = new google.maps.Map(document.getElementById('map'), options);
       this.map.mapTypes.set(layer, new google.maps.StamenMapType(layer));
       $.ajax({
-        url: '/places.json',
+        url: "/places.json?cache=" + (new Date()),
         dataType: 'json',
         success: this.placesLoaded
       });

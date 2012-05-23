@@ -50,7 +50,7 @@ GS.Views.Home = Backbone.View.extend
     # load places...
     @map.mapTypes.set layer, new google.maps.StamenMapType(layer)
     $.ajax
-      url: '/places.json'
+      url: "/places.json?cache=#{new Date()}"
       dataType: 'json'
       success: @placesLoaded
     return
