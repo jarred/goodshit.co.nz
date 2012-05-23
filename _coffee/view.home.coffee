@@ -39,12 +39,12 @@ GS.Views.Home = Backbone.View.extend
   addMap: ->
     layer = 'toner'
     options =
-      center: new google.maps.LatLng(-41.311833, 174.779038)
-      zoom: 12
+      center: new google.maps.LatLng(-41.28646, 174.776236)
+      zoom: 14
       mapTypeId: layer
       backgroundColor: '#000000'
       mapTypeControlOptions:
-        mapTypeIds: [layer]
+        mapTypeIds: []
 
     @map = new google.maps.Map document.getElementById('map'), options
     # load places...

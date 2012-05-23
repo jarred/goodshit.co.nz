@@ -7,4 +7,4 @@ long: 174.775464
 address: 120 Victoria St, Te Aro, Wellington  
 ---
 
-Seriously though. How good is this place?
+Good As Gold stocks the best fashion and street-wear brands from around the world.

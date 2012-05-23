@@ -124,3 +124,11 @@ html {
 #place {
   margin: 30px;
 }
+#place h1 {
+  font: 600 24px/24px 'Helvetica Neue', Sans-Serif;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+#place > address {
+  margin-bottom: 20px;
+}
