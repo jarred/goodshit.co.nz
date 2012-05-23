@@ -10,7 +10,19 @@
       this.o = o;
       _.bindAll(this);
       this.$el = $(this.el);
-      this.loadMapsAPI();
+      this.loadStyle();
+    },
+    loadStyle: function() {
+      var _this = this;
+      $.ajax({
+        url: '/js/map-style.json',
+        dataType: 'json',
+        success: function(data) {
+          console.log('loadStyle:success', data);
+          _this.mapStyle = data;
+          _this.loadMapsAPI();
+        }
+      });
     },
     loadMapsAPI: function() {
       GS.tempView = this;
@@ -27,7 +39,8 @@
       options = {
         center: new google.maps.LatLng(-41.311833, 174.779038),
         zoom: 12,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        styles: this.mapStyle
       };
       this.map = new google.maps.Map(document.getElementById('map'), options);
       $.ajax({
