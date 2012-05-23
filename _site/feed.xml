@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title></title>
+        <description></description>
+        <link></link>
+        
+            <item>
+                <title>Monterey</title>
+                <description>&lt;p&gt;Seriously though. How good is this place?&lt;/p&gt;</description>
+                <published>2012-05-22 00:00:00 +1200</published>
+                <link>/restaurant/monterey</link>
+            </item>
+        
+            <item>
+                <title>Good As Gold</title>
+                <description>&lt;p&gt;Seriously though. How good is this place?&lt;/p&gt;</description>
+                <published>2012-05-22 00:00:00 +1200</published>
+                <link>/shop/good-as-gold</link>
+            </item>
+        
+    </channel>
+</rss>

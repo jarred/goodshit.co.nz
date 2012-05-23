@@ -1,0 +1,17 @@
+{
+  "places": [
+  {
+    "id": "/restaurant/monterey",
+    "title": "Monterey",
+    "long": 174.779038,
+    "lat": -41.311833,
+    "permalink": "/restaurant/monterey"
+  },
+  {
+    "id": "/shop/good-as-gold",
+    "title": "Good As Gold",
+    "long": 174.775464,
+    "lat": -41.290642,
+    "permalink": "/shop/good-as-gold"
+  }]
+}

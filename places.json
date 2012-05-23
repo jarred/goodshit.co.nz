@@ -1,0 +1,13 @@
+---
+layout: json
+---
+{
+  "places": [{% for place in site.posts %}
+  {
+    "id": "{{ place.id }}",
+    "title": "{{ place.title }}",
+    "long": {{ place.long }},
+    "lat": {{ place.lat }},
+    "permalink": "{{ place.url }}"
+  }{% if forloop.last == false %},{% endif %}{% endfor %}]
+}
