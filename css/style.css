@@ -113,6 +113,8 @@ legend {
 html {
   font: 400 13px/18px 'Helvetica Neue', Sans-Serif;
   background-color: #FFF;
+  /*background: #FFF url('/images/grid.png') repeat top left;*/
+
 }
 .grid-line {
   position: absolute;
@@ -226,8 +228,22 @@ nav[role=main] {
   width: 768px;
   height: 768px;
 }
+.post {
+  z-index: 1;
+}
+.post > .border {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  right: 0px;
+  bottom: 0px;
+  border: 1px solid #EEE;
+  z-index: 1;
+}
 .post > .inner {
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 .post > .inner > .image {
   display: block;

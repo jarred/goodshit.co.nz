@@ -24,6 +24,7 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 html{
   font: 400 13px/18px @baseFontFamily;
   background-color: #FFF;
+  /*background: #FFF url('/images/grid.png') repeat top left;*/
 }
 
 .grid-line{
@@ -132,6 +133,7 @@ nav[role=main]{
 }
 
 .block{
+  
   float: left;
   position: relative;
   &.span2{
@@ -145,8 +147,20 @@ nav[role=main]{
 }
 
 .post{
+  z-index: 1;
+  > .border{
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    right: 0px;
+    bottom: 0px;
+    border: 1px solid #EEE;
+    z-index: 1;
+  }
   > .inner{
     text-align: center;
+    position: relative;
+    z-index: 2;
     > .image{
       display: block;
       margin: 20px;
