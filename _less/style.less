@@ -23,35 +23,35 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 
 html{
   font: 400 13px/18px @baseFontFamily;
-  background-color: #EEE;
+  background-color: #FFF;
 }
 
 .grid-line{
   position: absolute;
   background-color: #000;
-  opacity: .04;
-  z-index: 9999;
+  opacity: .05;
+  z-index: 1;
   &.horizontal{
     left: 0px;
     right: 0px;
     height: 1px;
     &:nth-child(1){
-      top: 199px;
+      top: @size - 1;
     }
     &:nth-child(2){
-      top: 399px;
+      top: @size * 2 - 1;
     }
     &:nth-child(3){
-      top: 599px;
+      top: @size * 3 - 1;
     }
     &:nth-child(4){
-      top: 799px;
+      top: @size * 4 - 1;
     }
     &:nth-child(5){
-      top: 999px;
+      top: @size * 5 - 1;
     }
     &:nth-child(6){
-      top: 1099px;
+      top: @size * 6 - 1;
     }
   }
   &.vertical{
@@ -59,22 +59,22 @@ html{
     bottom: 0px;
     width: 1px;
     &:nth-child(1){
-      left: 199px;
+      left: @size * 1 - 1;
     }
     &:nth-child(2){
-      left: 399px;
+      left: @size * 2 - 1;
     }
     &:nth-child(3){
-      left: 599px;
+      left: @size * 3 - 1;
     }
     &:nth-child(4){
-      left: 799px;
+      left: @size * 4 - 1;
     }
     &:nth-child(5){
-      left: 999px;
+      left: @size * 5 - 1;
     }
     &:nth-child(6){
-      left: 1199px;
+      left: @size * 6 - 1;
     }
   }
 }
@@ -138,6 +138,10 @@ nav[role=main]{
     width: @size * 2;
     height: @size * 2;
   }
+  &.span4{
+    width: @size * 4;
+    height: @size * 4;
+  }
 }
 
 .post{
@@ -148,6 +152,14 @@ nav[role=main]{
       margin: 20px;
     }
     > .info{
+      h4{
+        font: 400 12px/12px 'Apercu-mono', monospace;
+        margin-bottom: 10px;
+        > a{
+          text-decoration: underline;
+          color: #FF0033;
+        }
+      }
       h2{
         font: 400 30px/30px @headingsFontFamily;
         > a{
@@ -161,15 +173,33 @@ nav[role=main]{
     > .inner > .image > img{
       width: @size * 2 - 40px;
     }
+    &:nth-child(2n){
+      .info.top{
+        display: none;
+      }
+    }
+    &:nth-child(2n-1){
+      .info.bottom{
+        display: none;
+      }
+      > .inner{
+        position: absolute;
+        bottom: 0px;
+      }
+    }
   }
-  &:nth-child(2n){
+  &.span4{
+    > .inner > .image > img{
+      width: @size * 4 - 40px;
+    }
     .info.top{
       display: none;
     }
   }
-  &:nth-child(2n-1){
-    .info.bottom{
-      display: none;
+  &nth-child(3n){
+    width: @size * 4;
+    > .inner > .image > img{
+      width: @size * 4 - 40px;
     }
   }
 }

@@ -1,6 +1,6 @@
 ---
 title: Good As Gold
-categories: [wellington, retail]
+categories: wellington
 layout: place
 lat: -41.290642
 long: 174.775464

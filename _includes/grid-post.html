@@ -1,4 +1,4 @@
-<div class="post block span2">
+<div class="post block {% if post.feature %}span4{% else %}span2{% endif %}">
   <div class="inner">
     <div class="info top">
       {% for category in post.categories %}

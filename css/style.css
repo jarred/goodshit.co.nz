@@ -112,13 +112,13 @@ legend {
 }
 html {
   font: 400 13px/18px 'Helvetica Neue', Sans-Serif;
-  background-color: #EEE;
+  background-color: #FFF;
 }
 .grid-line {
   position: absolute;
   background-color: #000;
-  opacity: .04;
-  z-index: 9999;
+  opacity: .05;
+  z-index: 1;
 }
 .grid-line.horizontal {
   left: 0px;
@@ -126,22 +126,22 @@ html {
   height: 1px;
 }
 .grid-line.horizontal:nth-child(1) {
-  top: 199px;
+  top: 191px;
 }
 .grid-line.horizontal:nth-child(2) {
-  top: 399px;
+  top: 383px;
 }
 .grid-line.horizontal:nth-child(3) {
-  top: 599px;
+  top: 575px;
 }
 .grid-line.horizontal:nth-child(4) {
-  top: 799px;
+  top: 767px;
 }
 .grid-line.horizontal:nth-child(5) {
-  top: 999px;
+  top: 959px;
 }
 .grid-line.horizontal:nth-child(6) {
-  top: 1099px;
+  top: 1151px;
 }
 .grid-line.vertical {
   top: 0px;
@@ -149,22 +149,22 @@ html {
   width: 1px;
 }
 .grid-line.vertical:nth-child(1) {
-  left: 199px;
+  left: 191px;
 }
 .grid-line.vertical:nth-child(2) {
-  left: 399px;
+  left: 383px;
 }
 .grid-line.vertical:nth-child(3) {
-  left: 599px;
+  left: 575px;
 }
 .grid-line.vertical:nth-child(4) {
-  left: 799px;
+  left: 767px;
 }
 .grid-line.vertical:nth-child(5) {
-  left: 999px;
+  left: 959px;
 }
 .grid-line.vertical:nth-child(6) {
-  left: 1199px;
+  left: 1151px;
 }
 a#logo {
   position: absolute;
@@ -222,12 +222,24 @@ nav[role=main] {
   width: 384px;
   height: 384px;
 }
+.block.span4 {
+  width: 768px;
+  height: 768px;
+}
 .post > .inner {
   text-align: center;
 }
 .post > .inner > .image {
   display: block;
   margin: 20px;
+}
+.post > .inner > .info h4 {
+  font: 400 12px/12px 'Apercu-mono', monospace;
+  margin-bottom: 10px;
+}
+.post > .inner > .info h4 > a {
+  text-decoration: underline;
+  color: #FF0033;
 }
 .post > .inner > .info h2 {
   font: 400 30px/30px 'EuclidBPBoldBold', 'Helvetica Neue', Sans-Serif;
@@ -239,9 +251,25 @@ nav[role=main] {
 .post.span2 > .inner > .image > img {
   width: 344px;
 }
-.post:nth-child(2n) .info.top {
+.post.span2:nth-child(2n) .info.top {
   display: none;
 }
-.post:nth-child(2n-1) .info.bottom {
+.post.span2:nth-child(2n-1) .info.bottom {
   display: none;
+}
+.post.span2:nth-child(2n-1) > .inner {
+  position: absolute;
+  bottom: 0px;
+}
+.post.span4 > .inner > .image > img {
+  width: 728px;
+}
+.post.span4 .info.top {
+  display: none;
+}
+.postnth-child(3n) {
+  width: 768px;
+}
+.postnth-child(3n) > .inner > .image > img {
+  width: 728px;
 }
