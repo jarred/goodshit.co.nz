@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'EuclidBPBoldBold';
+  src: url('./euclid_bp_bold-webfont.eot');
+  src: url('./euclid_bp_bold-webfont.eot?#iefix') format('embedded-opentype'), url('./euclid_bp_bold-webfont.woff') format('woff'), url('./euclid_bp_bold-webfont.ttf') format('truetype'), url('./euclid_bp_bold-webfont.svg#EuclidBPBoldBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 /*
 YUI 3.4.1 (build 4118)
 Copyright 2011 Yahoo! Inc. All rights reserved.
@@ -105,6 +112,80 @@ legend {
 }
 html {
   font: 400 13px/18px 'Helvetica Neue', Sans-Serif;
+  background-color: #EEE;
+}
+.grid-line {
+  position: absolute;
+  background-color: #000;
+  opacity: .04;
+  z-index: 9999;
+}
+.grid-line.horizontal {
+  left: 0px;
+  right: 0px;
+  height: 1px;
+}
+.grid-line.horizontal:nth-child(1) {
+  top: 199px;
+}
+.grid-line.horizontal:nth-child(2) {
+  top: 399px;
+}
+.grid-line.horizontal:nth-child(3) {
+  top: 599px;
+}
+.grid-line.horizontal:nth-child(4) {
+  top: 799px;
+}
+.grid-line.horizontal:nth-child(5) {
+  top: 999px;
+}
+.grid-line.horizontal:nth-child(6) {
+  top: 1099px;
+}
+.grid-line.vertical {
+  top: 0px;
+  bottom: 0px;
+  width: 1px;
+}
+.grid-line.vertical:nth-child(1) {
+  left: 199px;
+}
+.grid-line.vertical:nth-child(2) {
+  left: 399px;
+}
+.grid-line.vertical:nth-child(3) {
+  left: 599px;
+}
+.grid-line.vertical:nth-child(4) {
+  left: 799px;
+}
+.grid-line.vertical:nth-child(5) {
+  left: 999px;
+}
+.grid-line.vertical:nth-child(6) {
+  left: 1199px;
+}
+a#logo {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.96) url('/images/logo.black.png') no-repeat center center;
+  z-index: 10;
+}
+a#logo:hover {
+  opacity: .2;
+}
+nav[role=main] {
+  position: absolute;
+  left: 0px;
+  top: 200px;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.96);
+  z-index: 10;
 }
 #home {
   position: fixed;
@@ -112,20 +193,21 @@ html {
   top: 0px;
   right: 0px;
   bottom: 0px;
+  z-index: 1;
 }
 #home > #map {
   position: absolute;
   left: 0px;
   top: 0px;
-  bottom: 0px;
-  right: 0px;
   background: #000000 url('/images/loading.black.gif') no-repeat center center;
+  border-radius: 0px;
+  overflow: hidden !important;
 }
 #place {
   margin: 30px;
 }
 #place h1 {
-  font: 600 24px/24px 'Helvetica Neue', Sans-Serif;
+  font: 400 24px/24px 'EuclidBPBoldBold', 'Helvetica Neue', Sans-Serif;
   letter-spacing: -1px;
   margin-bottom: 20px;
 }

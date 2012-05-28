@@ -10,6 +10,8 @@
       this.o = o;
       _.bindAll(this);
       this.$el = $(this.el);
+      this.$('#map').width($(window).width());
+      this.$('#map').height($(window).height());
       this.loadMapsAPI();
     },
     loadStyle: function() {
@@ -35,11 +37,17 @@
       $.ajax({
         url: "http://maps.stamen.com/js/tile.stamen.js",
         dataType: 'script',
-        success: this.addMap
+        success: this.bigMap
       });
     },
-    addMap: function() {
+    bigMap: function() {
       var layer, options;
+      this.$('#map').transit({
+        left: 0,
+        top: 0,
+        width: $(window).width(),
+        height: $(window).height()
+      }, 300);
       layer = 'toner';
       options = {
         center: new google.maps.LatLng(-41.28646, 174.776236),
@@ -60,23 +68,53 @@
     },
     placesLoaded: function(data) {
       this.model = new Backbone.Model(data);
-      _.each(this.model.get('places'), this.addPlaceMarker);
+      this.addPlaceMarkers();
     },
-    addPlaceMarker: function(place) {
-      var marker,
-        _this = this;
-      marker = new google.maps.Marker({
-        position: new google.maps.LatLng(place.lat, place.long),
-        map: this.map,
-        title: place.title
-      });
-      google.maps.event.addListener(marker, 'click', function() {
-        _this.markerClicked(place);
+    addPlaceMarkers: function() {
+      var _this = this;
+      _.each(this.model.get('places'), function(place) {
+        var marker;
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(place.lat, place.long),
+          map: _this.map,
+          title: place.title
+        });
+        marker.setAnimation('BOUNCE');
+        google.maps.event.addListener(marker, 'click', function() {
+          _this.markerClicked(place);
+        });
       });
     },
     markerClicked: function(place) {
-      console.log(place);
+      var _this = this;
       window.location = place.permalink;
+      return;
+      this.map = null;
+      this.$('#map').html('');
+      this.$('#map').transit({
+        left: 200,
+        top: 200,
+        width: 400,
+        height: 400
+      }, 300, function() {
+        _this.renderPlace(place);
+      });
+    },
+    renderPlace: function(place) {
+      var layer, options;
+      layer = 'toner';
+      options = {
+        center: new google.maps.LatLng(place.lat, place.long),
+        zoom: 17,
+        mapTypeId: layer,
+        backgroundColor: '#000000',
+        mapTypeControlOptions: {
+          mapTypeIds: []
+        }
+      };
+      this.map = new google.maps.Map(document.getElementById('map'), options);
+      this.map.mapTypes.set(layer, new google.maps.StamenMapType(layer));
+      this.addPlaceMarkers();
     }
   });
 
