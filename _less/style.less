@@ -136,6 +136,10 @@ nav[role=main]{
   
   float: left;
   position: relative;
+  &.span1{
+    width: @size;
+    height: @size;
+  }
   &.span2{
     width: @size * 2;
     height: @size * 2;
@@ -215,5 +219,20 @@ nav[role=main]{
     > .inner > .image > img{
       width: @size * 4 - 40px;
     }
+  }
+}
+
+.promotion{
+  height: @size * 2 !important;
+  position: relative;
+  > a{
+    display: block;
+    position: absolute;
+    top: @size + 20px;
+    text-decoration: none;
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+    background: #EEE;
   }
 }

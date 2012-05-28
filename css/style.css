@@ -220,6 +220,10 @@ nav[role=main] {
   float: left;
   position: relative;
 }
+.block.span1 {
+  width: 192px;
+  height: 192px;
+}
 .block.span2 {
   width: 384px;
   height: 384px;
@@ -288,4 +292,18 @@ nav[role=main] {
 }
 .postnth-child(3n) > .inner > .image > img {
   width: 728px;
+}
+.promotion {
+  height: 384px !important;
+  position: relative;
+}
+.promotion > a {
+  display: block;
+  position: absolute;
+  top: 212px;
+  text-decoration: none;
+  left: 20px;
+  bottom: 20px;
+  right: 20px;
+  background: #EEE;
 }

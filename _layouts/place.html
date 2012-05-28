@@ -18,9 +18,9 @@
     <address>
       {{ page.address | replace: ',': '<br />' }}
     </address>
-    <div class="description">{{ page.content }}</div>
+    
+    <div class="description">{{ content }}</div>
   </article>
 
-  {{ page | json }}
   {% include js.html %}
 </html>
