@@ -214,3 +214,34 @@ nav[role=main] {
 #place > address {
   margin-bottom: 20px;
 }
+.block {
+  float: left;
+  position: relative;
+}
+.block.span2 {
+  width: 384px;
+  height: 384px;
+}
+.post > .inner {
+  text-align: center;
+}
+.post > .inner > .image {
+  display: block;
+  margin: 20px;
+}
+.post > .inner > .info h2 {
+  font: 400 30px/30px 'EuclidBPBoldBold', 'Helvetica Neue', Sans-Serif;
+}
+.post > .inner > .info h2 > a {
+  text-decoration: none;
+  color: #000;
+}
+.post.span2 > .inner > .image > img {
+  width: 344px;
+}
+.post:nth-child(2n) .info.top {
+  display: none;
+}
+.post:nth-child(2n-1) .info.bottom {
+  display: none;
+}

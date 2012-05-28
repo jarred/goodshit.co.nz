@@ -19,6 +19,7 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 
 @baseFontFamily: 'Helvetica Neue', Sans-Serif;
 @headingsFontFamily: 'EuclidBPBoldBold', 'Helvetica Neue', Sans-Serif;
+@size: 192px;
 
 html{
   font: 400 13px/18px @baseFontFamily;
@@ -127,5 +128,48 @@ nav[role=main]{
   }
   > address{
     margin-bottom: 20px;
+  }
+}
+
+.block{
+  float: left;
+  position: relative;
+  &.span2{
+    width: @size * 2;
+    height: @size * 2;
+  }
+}
+
+.post{
+  > .inner{
+    text-align: center;
+    > .image{
+      display: block;
+      margin: 20px;
+    }
+    > .info{
+      h2{
+        font: 400 30px/30px @headingsFontFamily;
+        > a{
+          text-decoration: none;
+          color: #000;
+        }
+      }
+    }
+  }
+  &.span2{
+    > .inner > .image > img{
+      width: @size * 2 - 40px;
+    }
+  }
+  &:nth-child(2n){
+    .info.top{
+      display: none;
+    }
+  }
+  &:nth-child(2n-1){
+    .info.bottom{
+      display: none;
+    }
   }
 }
