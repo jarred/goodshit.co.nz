@@ -39,7 +39,7 @@
     addAMarker: function(info) {
       var i, icon, marker;
       icon = L.Icon.extend({
-        iconUrl: '/images/marker.art.png',
+        iconUrl: '/images/marker.landmarks.png',
         shadowUrl: null,
         shadowSize: null,
         iconSize: new L.Point(17, 29),

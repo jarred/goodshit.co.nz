@@ -33,7 +33,7 @@
           <span class="soon">soon</span>
         </span>
         <span class="city" data-id="chch">
-          <div class="number">09</div>
+          <div class="number">03</div>
           <span class="code">CHCH</span>
           <span class="soon">soon</span>
         </span>
@@ -51,6 +51,24 @@
           <li><a href="#"><i></i>Everything</a></li>
         </ul>
       </div>
+    </section>
+
+    <section id="recent">
+      <h3>Recent additions:</h3>
+      {% for post in site.posts %}
+      <div class="post block">
+        <div class="border">&nbsp;</div>
+        <div class="inner">
+          <div class="info top">
+            {% for category in post.categories %}
+              <h4><a href="#">{{ category }}</a></h4>
+            {% endfor %}
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          </div>
+          <a href="{{ post.url }}" class="image"><img src="{{ post.image }}" /></a>
+        </div>
+      </div>
+      {% endfor %}
     </section>
 
     <section id="map" class="extend loading" data-view="Map"></section>
