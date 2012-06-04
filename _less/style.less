@@ -107,6 +107,32 @@ section.contents{
       a{
         color: #000;
         text-decoration: none;
+        i{
+          display: inline-block;
+          width: 17px;
+          height: 29px;
+          position: relative;
+          margin-right: 10px;
+          top: 2px;
+          &.food{
+            background: url('/images/marker.food.png') no-repeat top left;
+          }
+          &.retail{
+           background: url('/images/marker.retail.png') no-repeat top left; 
+          }
+          &.nightlife{
+           background: url('/images/marker.nightlife.png') no-repeat top left; 
+          }
+          &.art{
+           background: url('/images/marker.art.png') no-repeat top left; 
+          }
+          &.landmarks{
+           background: url('/images/marker.landmarks.png') no-repeat top left; 
+          }
+          &.skate-spots{
+           background: url('/images/marker.skate-spots.png') no-repeat top left; 
+          }
+        }
       }
     }
   }
@@ -123,6 +149,16 @@ section#map{
   background-color: #000;
   &.loading{
     background: #000 url('/images/loading.black.gif') no-repeat 20px 20px;
+  }
+}
+
+@media all and (max-width: 320px) and (min-width: 0px) {
+  section#map{
+    display: none;
+    width: 320px;
+    height: 480px;
+    left: 0px;
+    top: 0px;
   }
 }
 

@@ -36,7 +36,22 @@
       this.model = new Backbone.Model(data);
       _.each(this.model.get('places'), this.addAMarker);
     },
-    addAMarker: function(info) {}
+    addAMarker: function(info) {
+      var i, icon, marker;
+      icon = L.Icon.extend({
+        iconUrl: '/images/marker.art.png',
+        shadowUrl: null,
+        shadowSize: null,
+        iconSize: new L.Point(17, 29),
+        iconAnchor: new L.Point(8, 29),
+        popupAnchor: new L.Point(-3, -30)
+      });
+      i = new icon();
+      marker = new L.Marker(new L.LatLng(info.lat, info.long), {
+        icon: i
+      });
+      this.map.addLayer(marker);
+    }
   });
 
 }).call(this);

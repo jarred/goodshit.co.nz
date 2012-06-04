@@ -192,6 +192,32 @@ section.contents .option ul a {
   color: #000;
   text-decoration: none;
 }
+section.contents .option ul a i {
+  display: inline-block;
+  width: 17px;
+  height: 29px;
+  position: relative;
+  margin-right: 10px;
+  top: 2px;
+}
+section.contents .option ul a i.food {
+  background: url('/images/marker.food.png') no-repeat top left;
+}
+section.contents .option ul a i.retail {
+  background: url('/images/marker.retail.png') no-repeat top left;
+}
+section.contents .option ul a i.nightlife {
+  background: url('/images/marker.nightlife.png') no-repeat top left;
+}
+section.contents .option ul a i.art {
+  background: url('/images/marker.art.png') no-repeat top left;
+}
+section.contents .option ul a i.landmarks {
+  background: url('/images/marker.landmarks.png') no-repeat top left;
+}
+section.contents .option ul a i.skate-spots {
+  background: url('/images/marker.skate-spots.png') no-repeat top left;
+}
 section#map {
   position: absolute;
   left: 320px;
@@ -204,6 +230,15 @@ section#map {
 }
 section#map.loading {
   background: #000000 url('/images/loading.black.gif') no-repeat 20px 20px;
+}
+@media all and (max-width: 320px) and (min-width: 0px) {
+  section#map {
+    display: none;
+    width: 320px;
+    height: 480px;
+    left: 0px;
+    top: 0px;
+  }
 }
 #home {
   position: fixed;

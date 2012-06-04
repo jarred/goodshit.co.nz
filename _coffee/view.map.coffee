@@ -33,6 +33,16 @@ GS.Views.Map = Backbone.View.extend
     return
 
   addAMarker: (info) ->
-    # marker = new L.Marker new L.LatLng(info.lat, info.long)
-    # @map.addLayer marker
+    icon = L.Icon.extend
+      iconUrl: '/images/marker.art.png'
+      shadowUrl: null
+      shadowSize: null
+      iconSize: new L.Point(17, 29)
+      iconAnchor: new L.Point(8, 29)
+      popupAnchor: new L.Point(-3, -30)
+
+    i = new icon()
+    marker = new L.Marker new L.LatLng(info.lat, info.long),
+      icon: i
+    @map.addLayer marker
     return
