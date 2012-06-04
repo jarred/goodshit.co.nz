@@ -28,12 +28,14 @@ http://yuilibrary.com/license/
 */
 html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}
 
-@baseFontFamily: 'Helvetica Neue', Sans-Serif;
-@headingsFontFamily: 'EuclidBPBoldBold', 'Helvetica Neue', Sans-Serif;
+@baseFace: 'Geneva', 'Helvetica Neue', Sans-Serif;
+@headingsFace: 'EuclidBPBoldBold', 'Helvetica Neue', Sans-Serif;
+@numbersFace: 'ARSNoveltyBold', 'EuclidBPBoldBold', Sans-Serif;
+@monoFace: 'Apercu-mono', 'monaco', monospace;
 @size: 192px;
 
 html{
-  font: 400 13px/18px @baseFontFamily;
+  font: 400 13px/18px @baseFace;
   background-color: #FFF;
   /*background: #FFF url('/images/grid.png') repeat top left;*/
 }
@@ -73,6 +75,7 @@ section.contents{
       margin-right: 10px;
       text-align: center;
       text-decoration: none;
+      color: #000;
       > .number{
         width: 50px;
         height: 50px;
@@ -80,10 +83,21 @@ section.contents{
         text-align: center;
         color: #FFF;
         background-color: #000;
-        font: 400 30px/50px 'ARSNoveltyBold';
+        font: 400 30px/50px @numbersFace;
+        margin-bottom: 6px;
       }
       > .code{
         display: block;
+        font: 400 12px/18px @monoFace;
+      }
+      > .soon{
+        color: #AAA;
+      }
+    }
+    > span.city{
+      color: #AAA;
+      > .number{
+        background-color: #AAA;
       }
     }
   }
@@ -109,7 +123,7 @@ section.contents{
 #place{
   margin: 30px;
   h1{
-    font: 400 24px/24px @headingsFontFamily;
+    font: 400 24px/24px @headingsFace;
     letter-spacing: -1px;
     margin-bottom: 20px;
   }
@@ -157,7 +171,7 @@ section.contents{
     }
     > .info{
       h4{
-        font: 400 12px/12px 'Apercu-mono', monospace;
+        font: 400 12px/12px @monoFace;
         margin-bottom: 10px;
         > a{
           text-decoration: underline;
@@ -165,7 +179,7 @@ section.contents{
         }
       }
       h2{
-        font: 400 30px/30px @headingsFontFamily;
+        font: 400 30px/30px @headingsFace;
         > a{
           text-decoration: none;
           color: #000;

@@ -118,7 +118,7 @@ legend {
   color: #000000;
 }
 html {
-  font: 400 13px/18px 'Helvetica Neue', Sans-Serif;
+  font: 400 13px/18px 'Geneva', 'Helvetica Neue', Sans-Serif;
   background-color: #FFF;
   /*background: #FFF url('/images/grid.png') repeat top left;*/
 
@@ -158,6 +158,7 @@ section.contents .option > .city {
   margin-right: 10px;
   text-align: center;
   text-decoration: none;
+  color: #000;
 }
 section.contents .option > .city > .number {
   width: 50px;
@@ -166,10 +167,21 @@ section.contents .option > .city > .number {
   text-align: center;
   color: #FFF;
   background-color: #000;
-  font: 400 30px/50px 'ARSNoveltyBold';
+  font: 400 30px/50px 'ARSNoveltyBold', 'EuclidBPBoldBold', Sans-Serif;
+  margin-bottom: 6px;
 }
 section.contents .option > .city > .code {
   display: block;
+  font: 400 12px/18px 'Apercu-mono', 'monaco', monospace;
+}
+section.contents .option > .city > .soon {
+  color: #AAA;
+}
+section.contents .option > span.city {
+  color: #AAA;
+}
+section.contents .option > span.city > .number {
+  background-color: #AAA;
 }
 #home {
   position: fixed;
@@ -236,7 +248,7 @@ section.contents .option > .city > .code {
   margin: 20px;
 }
 .post > .inner > .info h4 {
-  font: 400 12px/12px 'Apercu-mono', monospace;
+  font: 400 12px/12px 'Apercu-mono', 'monaco', monospace;
   margin-bottom: 10px;
 }
 .post > .inner > .info h4 > a {
