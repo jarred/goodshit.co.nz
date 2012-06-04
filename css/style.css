@@ -123,6 +123,10 @@ html {
   /*background: #FFF url('/images/grid.png') repeat top left;*/
 
 }
+.hide,
+.json {
+  display: none;
+}
 .block {
   float: left;
   position: relative;
@@ -148,7 +152,7 @@ html {
   top: -1px;
   right: 0px;
   bottom: 0px;
-  border: 1px solid #EEE;
+  border: 1px solid #DDD;
   z-index: 1;
 }
 .post > .inner {
@@ -367,6 +371,9 @@ section#recent .post .image img {
     top: 0px;
     right: 0px;
     bottom: 0px;
+  }
+  section#map.visible {
+    display: block;
   }
   .post {
     width: 320px;
