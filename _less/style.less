@@ -9,6 +9,17 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'ARSNoveltyBold';
+    src: url('./arsnovelty-webfont.eot');
+    src: url('./arsnovelty-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./arsnovelty-webfont.woff') format('woff'),
+         url('./arsnovelty-webfont.ttf') format('truetype'),
+         url('./arsnovelty-webfont.svg#ARSNoveltyBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*
 YUI 3.4.1 (build 4118)
 Copyright 2011 Yahoo! Inc. All rights reserved.
@@ -27,80 +38,55 @@ html{
   /*background: #FFF url('/images/grid.png') repeat top left;*/
 }
 
-.grid-line{
-  position: absolute;
-  background-color: #000;
-  opacity: .05;
-  z-index: 1;
-  &.horizontal{
-    left: 0px;
-    right: 0px;
-    height: 1px;
-    &:nth-child(1){
-      top: @size - 1;
-    }
-    &:nth-child(2){
-      top: @size * 2 - 1;
-    }
-    &:nth-child(3){
-      top: @size * 3 - 1;
-    }
-    &:nth-child(4){
-      top: @size * 4 - 1;
-    }
-    &:nth-child(5){
-      top: @size * 5 - 1;
-    }
-    &:nth-child(6){
-      top: @size * 6 - 1;
-    }
-  }
-  &.vertical{
-    top: 0px;
-    bottom: 0px;
-    width: 1px;
-    &:nth-child(1){
-      left: @size * 1 - 1;
-    }
-    &:nth-child(2){
-      left: @size * 2 - 1;
-    }
-    &:nth-child(3){
-      left: @size * 3 - 1;
-    }
-    &:nth-child(4){
-      left: @size * 4 - 1;
-    }
-    &:nth-child(5){
-      left: @size * 5 - 1;
-    }
-    &:nth-child(6){
-      left: @size * 6 - 1;
-    }
-  }
-}
 
 a#logo{
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 200px;
-  height: 200px;
-  background: rgba(255,255,255,0.96) url('/images/logo.black.png') no-repeat center center;
+  position: relative;
+  width: 140px;
+  display: block;
+  height: 21px;
+  background: rgba(255,255,255,0.96) url('/images/logo.black.small.png') no-repeat center center;
   z-index: 10;
   &:hover{
     opacity: .2;
   }
 }
 
-nav[role=main]{
+section.contents{
+  width: 320px;
   position: absolute;
   left: 0px;
-  top: 200px;
-  width: 200px;
-  height: 200px;
-  background-color: rgba(255,255,255,0.96);
-  z-index: 10;
+  top: 0px;
+  bottom: 0px;
+  background-color: #FFF;
+  > a#logo{
+    margin: 20px;
+  }
+  .option{
+    margin: 20px;
+    label{
+      display: block;
+      margin-bottom: 10px;
+    }
+    > .city{
+      display: inline-block;
+      width: 50px;
+      margin-right: 10px;
+      text-align: center;
+      text-decoration: none;
+      > .number{
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        text-align: center;
+        color: #FFF;
+        background-color: #000;
+        font: 400 30px/50px 'ARSNoveltyBold';
+      }
+      > .code{
+        display: block;
+      }
+    }
+  }
 }
 
 #home{

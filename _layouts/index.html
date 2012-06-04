@@ -11,25 +11,34 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
 </head>
   <body>
-    <a href="/" id="logo"></a>
-    <nav role="main">
-      <ul>
-        <li class="city-select">
-          <label>Select city:</label>
-          <select>
-            <option>04 — Wellington</option>
-            <option disabled="disabled">09 — Auckland (soon)</option>
-            <option disabled="disabled">03 — Christchurch (soon)</option>
-          </select>
-        </li>
-      </ul>
-    </nav>
-    <div class="extend" id="home" data-view="Home">
-      <div id="map"></div>
-    </div>
+
+    <section class="contents">
+      <a href="/" id="logo"></a>  
+
+      <div class="option" data-city="wlg">
+        <label>Select a city:</label>
+        <a href="#" class="city" data-id="wlg">
+          <div class="number">04</div>
+          <span class="code">WLG</span>
+          <span class="tick">&#10004;</span>
+        </a>
+        <a href="#" class="city" data-id="akl">
+          <div class="number">09</div>
+          <span class="code">AKL</span>
+          <span class="tick">&#10004;</span>
+        </a>
+        <a href="#" class="city" data-id="chch">
+          <div class="number">09</div>
+          <span class="code">CHCH</span>
+          <span class="tick">&#10004;</span>
+        </a>
+      </div>
+    </section>
+    
     {% include js.html %}
   </body>
 </html>

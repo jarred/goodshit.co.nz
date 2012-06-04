@@ -5,6 +5,13 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'ARSNoveltyBold';
+  src: url('./arsnovelty-webfont.eot');
+  src: url('./arsnovelty-webfont.eot?#iefix') format('embedded-opentype'), url('./arsnovelty-webfont.woff') format('woff'), url('./arsnovelty-webfont.ttf') format('truetype'), url('./arsnovelty-webfont.svg#ARSNoveltyBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 /*
 YUI 3.4.1 (build 4118)
 Copyright 2011 Yahoo! Inc. All rights reserved.
@@ -116,78 +123,53 @@ html {
   /*background: #FFF url('/images/grid.png') repeat top left;*/
 
 }
-.grid-line {
-  position: absolute;
-  background-color: #000;
-  opacity: .05;
-  z-index: 1;
-}
-.grid-line.horizontal {
-  left: 0px;
-  right: 0px;
-  height: 1px;
-}
-.grid-line.horizontal:nth-child(1) {
-  top: 191px;
-}
-.grid-line.horizontal:nth-child(2) {
-  top: 383px;
-}
-.grid-line.horizontal:nth-child(3) {
-  top: 575px;
-}
-.grid-line.horizontal:nth-child(4) {
-  top: 767px;
-}
-.grid-line.horizontal:nth-child(5) {
-  top: 959px;
-}
-.grid-line.horizontal:nth-child(6) {
-  top: 1151px;
-}
-.grid-line.vertical {
-  top: 0px;
-  bottom: 0px;
-  width: 1px;
-}
-.grid-line.vertical:nth-child(1) {
-  left: 191px;
-}
-.grid-line.vertical:nth-child(2) {
-  left: 383px;
-}
-.grid-line.vertical:nth-child(3) {
-  left: 575px;
-}
-.grid-line.vertical:nth-child(4) {
-  left: 767px;
-}
-.grid-line.vertical:nth-child(5) {
-  left: 959px;
-}
-.grid-line.vertical:nth-child(6) {
-  left: 1151px;
-}
 a#logo {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 200px;
-  height: 200px;
-  background: rgba(255, 255, 255, 0.96) url('/images/logo.black.png') no-repeat center center;
+  position: relative;
+  width: 140px;
+  display: block;
+  height: 21px;
+  background: rgba(255, 255, 255, 0.96) url('/images/logo.black.small.png') no-repeat center center;
   z-index: 10;
 }
 a#logo:hover {
   opacity: .2;
 }
-nav[role=main] {
+section.contents {
+  width: 320px;
   position: absolute;
   left: 0px;
-  top: 200px;
-  width: 200px;
-  height: 200px;
-  background-color: rgba(255, 255, 255, 0.96);
-  z-index: 10;
+  top: 0px;
+  bottom: 0px;
+  background-color: #FFF;
+}
+section.contents > a#logo {
+  margin: 20px;
+}
+section.contents .option {
+  margin: 20px;
+}
+section.contents .option label {
+  display: block;
+  margin-bottom: 10px;
+}
+section.contents .option > .city {
+  display: inline-block;
+  width: 50px;
+  margin-right: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+section.contents .option > .city > .number {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  text-align: center;
+  color: #FFF;
+  background-color: #000;
+  font: 400 30px/50px 'ARSNoveltyBold';
+}
+section.contents .option > .city > .code {
+  display: block;
 }
 #home {
   position: fixed;
