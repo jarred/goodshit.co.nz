@@ -10,6 +10,7 @@
   <title></title>
   <meta name="description" content="">
   <meta name="author" content="">
+  <link rel="stylesheet" type="text/css" href="/css/leaflet.css" />
   <link rel="stylesheet" type="text/css" href="/css/style.css" />
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -19,7 +20,7 @@
     <section class="contents">
       <a href="/" id="logo"></a>  
 
-      <div class="option" data-city="wlg">
+      <div class="option">
         <label>Select a city:</label>
         <a href="#" class="city" data-id="wlg">
           <div class="number">04</div>
@@ -37,7 +38,22 @@
           <span class="soon">soon</span>
         </span>
       </div>
+
+      <div class="option">
+        <label>find me:</label>
+        <ul>
+          <li><a href="#">Retail</a></li>
+          <li><a href="#">Nightlife</a></li>
+          <li><a href="#">Food</a></li>
+          <li><a href="#">Art</a></li>
+          <li><a href="#">Landmarks</a></li>
+          <li><a href="#">Skate Spots</a></li>
+          <li><a href="#">Everything</a></li>
+        </ul>
+      </div>
     </section>
+
+    <section id="map" class="extend loading" data-view="Map"></section>
     
     {% include js.html %}
   </body>

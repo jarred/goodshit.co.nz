@@ -151,6 +151,8 @@ section.contents .option {
 section.contents .option label {
   display: block;
   margin-bottom: 10px;
+  font: 400 12px/20px 'Geneva', 'Helvetica Neue', Sans-Serif;
+  color: #AAA;
 }
 section.contents .option > .city {
   display: inline-block;
@@ -182,6 +184,26 @@ section.contents .option > span.city {
 }
 section.contents .option > span.city > .number {
   background-color: #AAA;
+}
+section.contents .option ul {
+  font: 400 30px/34px 'EuclidBPBoldBold', 'Helvetica Neue', Sans-Serif;
+}
+section.contents .option ul a {
+  color: #000;
+  text-decoration: none;
+}
+section#map {
+  position: absolute;
+  left: 320px;
+  top: 0px;
+  bottom: 0px;
+  min-width: 320px;
+  min-height: 480px;
+  right: 0px;
+  background-color: #000;
+}
+section#map.loading {
+  background: #000000 url('/images/loading.black.gif') no-repeat 20px 20px;
 }
 #home {
   position: fixed;

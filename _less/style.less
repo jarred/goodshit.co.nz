@@ -68,6 +68,8 @@ section.contents{
     label{
       display: block;
       margin-bottom: 10px;
+      font: 400 12px/20px @baseFace;
+      color: #AAA;
     }
     > .city{
       display: inline-block;
@@ -100,6 +102,27 @@ section.contents{
         background-color: #AAA;
       }
     }
+    ul{
+      font: 400 30px/34px @headingsFace;
+      a{
+        color: #000;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+section#map{
+  position: absolute;
+  left: 320px;
+  top: 0px;
+  bottom: 0px;
+  min-width: 320px;
+  min-height: 480px;
+  right: 0px;
+  background-color: #000;
+  &.loading{
+    background: #000 url('/images/loading.black.gif') no-repeat 20px 20px;
   }
 }
 
