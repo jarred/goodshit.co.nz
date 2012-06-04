@@ -37,7 +37,8 @@
       _.each(this.model.get('places'), this.addAMarker);
     },
     addAMarker: function(info) {
-      var i, icon, marker;
+      var i, icon, marker,
+        _this = this;
       icon = L.Icon.extend({
         iconUrl: '/images/marker.landmarks.png',
         shadowUrl: null,
@@ -51,6 +52,12 @@
         icon: i
       });
       this.map.addLayer(marker);
+      marker.on('click', function() {
+        _this.markerClicked(marker, info);
+      });
+    },
+    markerClicked: function(marker, info) {
+      window.location = info.permalink;
     }
   });
 

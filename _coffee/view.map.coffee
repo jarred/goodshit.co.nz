@@ -45,4 +45,12 @@ GS.Views.Map = Backbone.View.extend
     marker = new L.Marker new L.LatLng(info.lat, info.long),
       icon: i
     @map.addLayer marker
+
+    marker.on 'click', () =>
+      @markerClicked marker, info
+      return
+    return
+
+  markerClicked: (marker, info) ->
+    window.location = info.permalink
     return
